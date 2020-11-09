@@ -7,10 +7,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Delete Document Objects
-      run: |
-        sh /Users/marco/Code/se-tools/demo-environment/9-scripts/misc/delete_document_objects.sh
-      - name: Kong Deploy Order API
+    - name: Kong Deploy Order API
       uses: ./.github/actions/portal-deploy-action
       with:
         kong-config-type: kong-declarative-config
