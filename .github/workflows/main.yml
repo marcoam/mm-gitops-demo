@@ -9,7 +9,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Delete Document Objects
       run: |
-        http http://localhost:8001/document_objects Kong-Admin-Token:KongRul3z! | jq -c '.data[].id' | while read id; do;    echo "Deleting the document_object with the ID: ${id}";    http --ignore-stdin DELETE http://localhost:8001/document_objects/$id Kong-Admin-Token:KongRul3z!;done
+        sh /Users/marco/Code/se-tools/demo-environment/9-scripts/misc/delete_document_objects.sh
       - name: Kong Deploy Order API
       uses: ./.github/actions/portal-deploy-action
       with:
