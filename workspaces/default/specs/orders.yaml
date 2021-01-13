@@ -23,18 +23,9 @@ paths:
       x-kong-plugin-rate-limiting:
         enabled: true
         config:
-          minute: 7
+          minute: 10
           limit_by: ip
-          policy: local     
-      x-kong-plugin-openid-connect:
-        enabled: true
-        config:
-          issuer: https://dev-513727.okta.com/oauth2/default
-          consumer_optional: true
-          auth_methods:
-          - client_credentials
-          verify_parameters: false
-          scopes: []
+          policy: local
       responses:
         '200':
           description: Order object
