@@ -16,10 +16,11 @@ paths:
       summary: Fetches an order
       tags:
         - order
-      x-kong-plugin-mocking:
+      x-kong-plugin-key-auth:
         enabled: true
         config:
-          api_specification_filename: orders.yaml
+          key_names:
+          - apikey
       responses:
         '200':
           description: Order object
