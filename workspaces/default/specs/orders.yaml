@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: '1.5'
-  title: LCE Order API
+  title: LCE Orders API
   license:
     name: Apache 2.0
   description: 'Pizza ordering API'
