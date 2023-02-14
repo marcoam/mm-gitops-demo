@@ -16,11 +16,6 @@ paths:
       summary: Fetches an order
       tags:
         - order
-      x-kong-plugin-key-auth:
-        enabled: true
-        config:
-          key_names:
-          - apikey
       responses:
         '200':
           description: Order object
