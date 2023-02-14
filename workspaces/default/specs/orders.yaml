@@ -26,6 +26,11 @@ paths:
           minute: 20
           limit_by: ip
           policy: local
+      x-kong-plugin-key-auth:
+        enabled: true
+        config:
+          key_names:
+          - apikey
       responses:
         '200':
           description: Order object
