@@ -16,6 +16,10 @@ paths:
       summary: Fetches an order
       tags:
         - order
+      x-kong-plugin-mocking:
+        enabled: true
+        config:
+          api_specification_filename: orders.yaml
       responses:
         '200':
           description: Order object
